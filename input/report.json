@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "customer_name": "IBM",
+      "status_id": 1,
+      "note": "IBM is active"
+    },
+    {
+      "customer_name": "HP",
+      "status_id": 0,
+      "note": "HP is not active"
+    },
+    {
+      "customer_name": "MS",
+      "status_id": 0,
+      "note": "MS is not active"
+    }
+  ]
+}

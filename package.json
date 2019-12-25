@@ -1,0 +1,24 @@
+{
+  "name": "node-excel-json-parser",
+  "version": "1.0.0",
+  "description": "Node.js based Excel to Json and Json to Excel parser.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "build": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "excel",
+    "json",
+    "parser"
+  ],
+  "author": "Syed Zeeshan Akhtar",
+  "license": "ISC",
+  "dependencies": {
+    "node-excel-export": "^1.4.4",
+    "read-excel-file": "^4.0.5",
+    "xlsx": "^0.15.4"
+  }
+}
