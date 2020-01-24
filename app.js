@@ -34,8 +34,13 @@ json_to_excel = function () {
 excel_to_json = function () {
     var schema = consts.schema;
 
-    readXlsxFile('./input/report.xlsx', { schema }).then((rows) => {
-        fs.writeFileSync("./output/report.json", JSON.stringify(rows, null, 2));
+    readXlsxFile('./input/report.xlsx',  { getSheets: true }).then((sheets) => {
+        sheets.forEach(sheet => {
+            readXlsxFile('./input/report.xlsx',  { sheet: sheet.name }).then((rows) => {
+                fs.writeFileSync("./output/report_"+sheet.name+'.json', JSON.stringify(rows, null, 2));
+            });
+        });
+        
     });
 
     console.log('Json exported to ./output/report.json');
